@@ -1,0 +1,42 @@
+[archive]
+
+# github.com/metacubex/chacha is actually a copy of chacha and poly1305 from github.com/aead, which is MIT licensed
+# it seems to be some internal used dependency
+# and clash-meta itself is MIT licensed too, so I treat this as MIT.
+post_commands = [
+    ["cp","vendor/github.com/metacubex/chacha/poly1305/LICENSE","vendor/github.com/metacubex/chacha/LICENSE"]
+]
+
+[archive.dependency_overrides]
+
+[licensing]
+detector = "askalono"
+[[licensing.licenses]]
+path = "transport/hysteria/conns/faketcp/LICENSE"
+sha256sum = "efeb1f4690b9c00796d4304271e95e0a1a5468f40808771d70ef921777163ffc"
+expression = "MIT"
+
+[[licensing.licenses]]
+path = "vendor/github.com/cloudflare/circl/LICENSE"
+sha256sum = "b0da1764fe4d13d610b695536fc3f2ebc362482d053a1cd258e36975bc6b97a7"
+expression = "BSD-3-Clause"
+
+[[licensing.licenses]]
+path = "vendor/github.com/miekg/dns/COPYRIGHT"
+sha256sum = "66550c0ad5ca7ec1e08683e5f872cc45c741f311eee3b8ee484206ecbf9c740d"
+expression = "BSD-3-Clause"
+
+[[licensing.licenses]]
+path = "vendor/github.com/shirou/gopsutil/v3/LICENSE"
+sha256sum = "ad1e64b82c04fb2ee6bfe521bff01266971ffaa70500024d4ac767c6033aafb9"
+expression = "BSD-3-Clause"
+
+[[licensing.licenses]]
+path = "vendor/gopkg.in/yaml.v3/LICENSE"
+sha256sum = "d18f6323b71b0b768bb5e9616e36da390fbd39369a81807cca352de4e4e6aa0b"
+expression = "Apache-2.0 AND MIT"
+
+[[licensing.licenses]]
+path = "vendor/github.com/metacubex/chacha/poly1305/LICENSE"
+sha256sum = "16685415eddfc629886f470a177a55985da5d57d42610483f997634cc783e8d5"
+expression = "MIT"
